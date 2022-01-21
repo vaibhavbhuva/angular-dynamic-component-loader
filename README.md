@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.15.
 
-Build, test, and lint the project with CLI commands:
+Before we can use our library, we need to build it (Build, test, and lint the project with CLI commands):
 
 ```
 ng build dynamic-lib --configuration development
