@@ -123,6 +123,46 @@
           }
         }
       }
+    },
+    "dynamic-lib": {
+      "projectType": "library",
+      "root": "projects/dynamic-lib",
+      "sourceRoot": "projects/dynamic-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/dynamic-lib/tsconfig.lib.json",
+            "project": "projects/dynamic-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/dynamic-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/dynamic-lib/src/test.ts",
+            "tsConfig": "projects/dynamic-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/dynamic-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/dynamic-lib/tsconfig.lib.json",
+              "projects/dynamic-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "dynamic-angular-app"
 }
