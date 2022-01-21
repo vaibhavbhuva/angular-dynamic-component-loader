@@ -5,9 +5,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Build, test, and lint the project with CLI commands:
 
 ```
-ng build my-lib --configuration development
-ng test my-lib
-ng lint my-lib
+ng build dynamic-lib --configuration development
+ng test dynamic-lib
+ng lint dynamic-lib
 ```
 
 ## Development server
